@@ -1,0 +1,431 @@
+/* -------------------------------------------------------
+   Ajax grid
+   ------------------------------------------------------- */
+.ajaxgrid * {
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    font-size: 13px;
+}
+
+.ajaxgrid, .grid {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+    .ajaxgrid .table-wrapper > table > tbody > tr > td.ajaxgrid-spinner {
+        text-align: center;
+    }
+
+    .ajaxgrid .table-wrapper > table > tbody > tr > td.ajaxgrid-spinner > i:after {
+        font-family: FontAwesome;
+        content: "\f110";
+    }
+
+    .ajaxgrid .table-wrapper > table > tbody > tr > td.ajaxgrid-spinner > span.ajaxgrid-spinner-text:after {
+        content: "Vent venligst, mens data hentes...";
+        padding-left: 8px;
+    }
+
+    .ajaxgrid .no-select,
+    .grid .no-select {
+        -webkit-touch-callout: none;
+        /*-webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;*/
+    }
+
+    .ajaxgrid .select,
+    .grid .select {
+        margin: 2px;
+        padding: 0;
+        background: #edf5f8;
+    }
+
+    .ajaxgrid > .header,
+    .grid > .header {
+    }
+
+        .ajaxgrid > .header input,
+        .grid > .header input {
+            margin: 2px;
+            padding: 1px;
+        }
+
+        .ajaxgrid > .header select,
+        .grid > .header select {
+            margin: 2px;
+            padding: 0;
+            background: #edf5f8;
+        }
+
+        .ajaxgrid > .header input[type=checkbox],
+        .grid > .header input[type=checkbox] {
+            position: relative;
+            top: 2px;
+        }
+
+        .ajaxgrid > .header > .search,
+        .grid > .header > .search {
+            float: right;
+        }
+
+            .ajaxgrid > .header > .search > .search-label,
+            .grid > .header > .search > .search-label {
+                margin-right: 2px;
+                -webkit-touch-callout: none;
+                /*-webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;*/
+                color: #666;
+            }
+
+            .ajaxgrid > .header > .search > .search-button,
+            .grid > .header > .search > .search-button {
+                width: 16px;
+                height: 16px;
+                /*background: url('images/search_16x16.png') no-repeat;*/
+                border: none;
+                margin: 3px 2px 0 0;
+                cursor: pointer;
+                float: right;
+                -webkit-touch-callout: none;
+                /*-webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;*/
+            }
+
+    .ajaxgrid > div.custom-filters {
+        float: right;
+        text-align: right;
+        min-height: 38px;
+    }
+
+        .ajaxgrid > div.custom-filters select {
+            margin-left: 5px;
+        }
+
+            .ajaxgrid > div.custom-filters select.form-control {
+                display: inline-block;
+                width: auto;
+            }
+
+    .ajaxgrid > .table-wrapper > table,
+    .grid > .table-wrapper > table {
+        width: 100%;
+        border-collapse: separate;
+    }
+
+        .ajaxgrid > .table-wrapper > table > thead > tr > th,
+        .grid > .table-wrapper > table > thead > tr > th {
+            padding: 5px;
+            white-space: nowrap;
+            -webkit-touch-callout: none;
+            /*-webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;*/
+            text-align: left;
+            border-bottom: 1px solid #CCC;
+            font-size: 13px;
+            font-weight: normal;
+            color: #666;
+        }
+
+            .ajaxgrid > .table-wrapper > table > thead > tr > th > .sort,
+            .grid > .table-wrapper > table > thead > tr > th > .sort {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin: -3px 3px;
+            }
+
+                .ajaxgrid > .table-wrapper > table > thead > tr > th > .sort.asc,
+                .grid > .table-wrapper > table > thead > tr > th > .sort.asc {
+                    content: url(data:image/gif;base64,R0lGODlhEAAQAHAAACH5BAEAAAIALAAAAAAQABAAgQAAAEZpkAAAAAAAAAIelI+pyxid3oNiVmhNdqH7ToXi8ZVMCTYm5Y3bCCcFADs=);
+                }
+
+                .ajaxgrid > .table-wrapper > table > thead > tr > th > .sort.desc,
+                .grid > .table-wrapper > table > thead > tr > th > .sort.desc {
+                    content: url(data:image/gif;base64,R0lGODlhEAAQAHAAACH5BAEAAAIALAAAAAAQABAAgQAAAEZpkAAAAAAAAAIclI+pyxidgoRGWmgzy5z6f3Da8jhY6D1lCrZQAQA7);
+                }
+
+            .ajaxgrid > .table-wrapper > table > thead > tr > th[data-sortkey],
+            .grid > .table-wrapper > table > thead > tr > th[data-sortkey] {
+                cursor: pointer;
+            }
+
+                .ajaxgrid > .table-wrapper > table > thead > tr > th[data-sortkey]:focus,
+                .grid > .table-wrapper > table > thead > tr > th[data-sortkey]:focus,
+                .ajaxgrid div.prev:focus,
+                .ajaxgrid div.next:focus,
+                .ajaxgrid div.reset span.link:focus,
+                .ajaxgrid #pageSizeSelector:focus {
+                    outline-color: #419FF2;
+                    border: 1px solid #419FF2;
+                    border-radius: 2px;
+                    box-shadow: 0 0 6px rgba(8, 90, 155, 0.6);
+                    outline: none !important;
+                }
+
+            .ajaxgrid > .table-wrapper > table > thead > tr > th.actions,
+            .grid > .table-wrapper > table > thead > tr > th.actions,
+            th.actions,
+            td.actions {
+                width: 1%;
+                white-space: nowrap;
+            }
+
+        .ajaxgrid > .table-wrapper > table > thead > tr.column-filters > th {
+            border-bottom: 1px solid #CCC;
+            padding: 3px 5px 3px 5px;
+        }
+
+            .ajaxgrid > .table-wrapper > table > thead > tr.column-filters > th input[type="text"] {
+                width: 90%;
+            }
+
+        .ajaxgrid > .table-wrapper > table > tbody > tr.deleted > td,
+        .grid > .table-wrapper > table > tbody > tr.deleted > td {
+            font-style: italic;
+        }
+
+        .ajaxgrid > .table-wrapper > table > tbody > tr > td,
+        .grid > .table-wrapper > table > tbody > tr > td {
+            border-top: 1px solid white;
+            border-bottom: 1px solid #edf5f8;
+            padding: 5px;
+            line-height: 22px;
+        }
+
+            .ajaxgrid > .table-wrapper > table > tbody > tr > td .nowrap,
+            .grid > .table-wrapper > table > tbody > tr > td .nowrap {
+                white-space: nowrap;
+                overflow: hidden;
+                -ms-text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+            }
+
+            .ajaxgrid > .table-wrapper > table > tbody > tr > td .select,
+            .grid > .table-wrapper > table > tbody > tr > td .select {
+                position: relative;
+                left: 2px;
+            }
+
+        .ajaxgrid > .table-wrapper > table > tbody > tr.group > td,
+        .grid > .table-wrapper > table > tbody > tr.group > td {
+            background: #cad5e3;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+
+            .ajaxgrid > .table-wrapper > table > tbody > tr.group > td .collapse-expand,
+            .grid > .table-wrapper > table > tbody > tr.group > td .collapse-expand {
+                width: 16px;
+                height: 16px;
+                /*background: url('images/tree_collapse_16x16.png') no-repeat;*/
+                position: relative;
+                top: 0;
+                left: 3px;
+                cursor: pointer;
+            }
+
+                .ajaxgrid > .table-wrapper > table > tbody > tr.group > td .collapse-expand.collapsed,
+                .grid > .table-wrapper > table > tbody > tr.group > td .collapse-expand.collapsed {
+                    /*background: url('images/tree_expand_16x16.png') no-repeat;*/
+                }
+
+        .ajaxgrid > .table-wrapper > table > tbody > tr > td.minimal,
+        .grid > .table-wrapper > table > tbody > tr > td.minimal {
+            width: 1%;
+            white-space: nowrap;
+        }
+
+        .ajaxgrid > .table-wrapper > table .actions,
+        .grid > .table-wrapper > table .actions {
+            white-space: nowrap;
+        }
+
+            .ajaxgrid > .table-wrapper > table .actions img,
+            .grid > .table-wrapper > table .actions img {
+                vertical-align: bottom;
+            }
+
+            .ajaxgrid > .table-wrapper > table .actions ul,
+            .grid > .table-wrapper > table .actions ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+            }
+
+    .ajaxgrid .footer,
+    .grid .footer {
+        border-top: 1px solid #CCC;
+        padding-top: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-touch-callout: none;
+        /*-webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;*/
+    }
+
+        .ajaxgrid .footer [class^="icon-"],
+        .ajaxgrid .footer [class*=" icon-"] {
+            font-size: 16px;
+        }
+
+        .ajaxgrid .footer .disabled i {
+            color: #CCC;
+        }
+
+        .ajaxgrid .footer .footertext,
+        .grid .footer .footertext {
+            margin: 4px;
+            font-size: 90%;
+            color: #6a797e;
+        }
+
+        .ajaxgrid .footer > .status,
+        .grid .footer > .status {
+            float: right;
+            margin: 4px;
+            font-size: 90%;
+            color: #6a797e;
+        }
+
+            .ajaxgrid .footer > .status select,
+            .grid .footer > .status select {
+                padding: 0;
+                font-size: 100%;
+                margin: -5px 0;
+            }
+
+        .ajaxgrid .footer > .page-container,
+        .grid .footer > .page-container {
+            height: 20px;
+            float: left;
+        }
+
+            .ajaxgrid .footer > .page-container > .page-text,
+            .grid .footer > .page-container > .page-text {
+                float: left;
+                margin: 2px;
+                font-size: 90%;
+                height: 20px;
+                color: #6a797e;
+            }
+
+            .ajaxgrid .footer > .page-container .img,
+            .grid .footer > .page-container .img {
+                float: left;
+                width: 16px;
+                height: 16px;
+                margin: 2px;
+            }
+
+            .ajaxgrid .footer > .page-container > .prev,
+            .grid .footer > .page-container > .prev {
+                float: left;
+                width: 16px;
+                height: 16px;
+                padding-top: 2px;
+                cursor: pointer;
+            }
+
+                .ajaxgrid .footer > .page-container > .prev.disabled,
+                .grid .footer > .page-container > .prev.disabled {
+                    float: left;
+                    width: 16px;
+                    height: 16px;
+                    padding-top: 2px;
+                    cursor: default;
+                }
+
+            .ajaxgrid .footer > .page-container > .next,
+            .grid .footer > .page-container > .next {
+                float: left;
+                width: 16px;
+                height: 16px;
+                padding-top: 2px;
+                padding-left: 4px;
+                cursor: pointer;
+            }
+
+                .ajaxgrid .footer > .page-container > .next.disabled,
+                .grid .footer > .page-container > .next.disabled {
+                    float: left;
+                    width: 16px;
+                    height: 16px;
+                    padding-top: 2px;
+                    cursor: default;
+                }
+
+        .ajaxgrid .footer > .page-size-container,
+        .grid .footer > .page-size-container {
+            height: 20px;
+            float: left;
+        }
+
+            .ajaxgrid .footer > .page-size-container > .label,
+            .grid .footer > .page-size-container > .label {
+                float: left;
+                margin: 4px;
+                font-size: 90%;
+                color: #6a797e;
+            }
+
+            .ajaxgrid .footer > .page-size-container > #pageSizeSelector,
+            .grid .footer > .page-size-container > #pageSizeSelector {
+                float: left;
+                margin: 4px;
+                margin-top: 6px;
+                font-size: 90%;
+            }
+
+        .ajaxgrid .footer > .divider,
+        .grid .footer > .divider {
+            float: left;
+            margin: 4px;
+            font-size: 90%;
+            color: #6a797e;
+        }
+
+        .ajaxgrid .footer > .reset,
+        .grid .footer > .reset {
+            float: right;
+            cursor: pointer;
+            margin: 4px;
+            font-size: 90%;
+            color: #6a797e;
+        }
+
+        .ajaxgrid .footer > .clear,
+        .grid .footer > .clear {
+            clear: both;
+        }
+
+    .ajaxgrid .no-results,
+    .grid .no-results {
+        padding: 10px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .ajaxgrid.stickyFirstRow tbody tr:first-child td {
+        background: #EDF6FF;
+        font-style: italic;
+    }
+
+.ajaxgrid-footnote {
+    font-size: 80%;
+    font-style: italic;
+    margin: -3px 5px 0 5px;
+}
