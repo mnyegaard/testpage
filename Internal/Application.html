@@ -45,13 +45,13 @@
         <div class="container-fluid">
             <div aria-hidden="true" id="logo">
                 <a href="/Internal/CitizenEvent" role="button" aria-label="Link til startside">
-                    <h1 class="logo">K&#248;repr&#248;vebooking</h1>
+                    <h1 class="logo">Køreprøvebooking</h1>
                 </a>
             </div>
             <section class="container">
                     <div id="quick-search" class="col-sm-3 col-xs-12 pull-right">
                         <div class="input-group col-sm-12 col-xs-6 pull-right">
-    <input Aria-Label="Søg på CPR-nummer eller forløbsnummer" class="form-control quick-search" data-url="/Internal/Application" id="page-header-quick-search" name="page-header-quick-search" placeholder="Indtast CPR-nr./forløbsnr." type="text" value="" />
+    <input aria-label="Søg på CPR-nummer eller forløbsnummer" class="form-control quick-search" data-url="/Internal/Application" id="page-header-quick-search" name="page-header-quick-search" placeholder="Indtast CPR-nr./forløbsnr." type="text" value="">
     <a href="javascript:void(0)" class="input-group-addon quick-search" aria-label="Søg på CPR-nummer eller forløbsnummer" role="button">
         <i aria-hidden="true" class="fa fa-search"></i>
     </a>
@@ -70,15 +70,15 @@
 </li>
 
 <li class="active">
-    <a class="ui-test-Pr&#248;veforl&#248;b" href="/Internal/Application" role="button" aria-label="Vis Pr&#248;veforl&#248;b">Pr&#248;veforl&#248;b</a>
+    <a class="ui-test-Prøveforløb" href="/Internal/Application" role="button" aria-label="Vis Prøveforløb">Prøveforløb</a>
 </li>
 
 <li class="">
-    <a class="ui-test-K&#248;reskole" href="/Internal/DrivingSchool/Details?id=9d268c98-a9f2-4cdc-ae3d-41b0c0c84323" role="button" aria-label="Vis K&#248;reskole">K&#248;reskole</a>
+    <a class="ui-test-Køreskole" href="/Internal/DrivingSchool/Details?id=9d268c98-a9f2-4cdc-ae3d-41b0c0c84323" role="button" aria-label="Vis Køreskole">Køreskole</a>
 </li>
 
 <li class="">
-    <a class="ui-test-Pr&#248;vetider" href="/Internal/Exam" role="button" aria-label="Vis Pr&#248;vetider">Pr&#248;vetider</a>
+    <a class="ui-test-Prøvetider" href="/Internal/Exam" role="button" aria-label="Vis Prøvetider">Prøvetider</a>
 </li>
 
 <li class="">
@@ -113,7 +113,7 @@
                             
     
 
-<h2>Pr&#248;veforl&#248;b</h2>
+<h2>Prøveforløb</h2>
 <p class="text-info-darker">Du kan søge i listen for at finde et prøveforløb</p>
 
                         </div>
@@ -126,34 +126,1635 @@
 
 <div id="application-index">
     <div class="row">
-        <a href="javascript:void(0)" class="btn create-application button-row" data-url="/Internal/Application" role="button" aria-label="Opret nyt forløb">Opret forl&#248;b</a>
+        <a href="javascript:void(0)" class="btn create-application button-row" data-url="/Internal/Application" role="button" aria-label="Opret nyt forløb">Opret forløb</a>
     </div>
     <div class="row">
         <div class="col-xs-12 framed-content">
             <div id="application-list-title" class="col-xs-12">
-                <h3 class="tabheader">Oprettede pr&#248;veforl&#248;b</h3>
+                <h3 class="tabheader">Oprettede prøveforløb</h3>
             </div>
             <div id="application-list-filter" class="filter-content col-xs-12">
                 <div class="pull-right">
                     <label for="Filter_Status">Filtrering af liste:</label>
-                    <select Aria-Label="Vælg status" autocomplete="on" class="form-control form-control-select " data-val="true" data-val-required="The Filtrering af liste: field is required." id="Filter.Status" maxLength="none" name="Filter.Status"><option value="0">Alle statusser</option>
+                    <select aria-label="Vælg status" autocomplete="on" class="form-control form-control-select " data-val="true" data-val-required="The Filtrering af liste: field is required." id="Filter.Status" maxlength="none" name="Filter.Status"><option value="0">Alle statusser</option>
 <option value="12">Afventer elevunderskrift</option>
 <option value="1">Afventer behandling</option>
 <option value="4">Under viderebehandling</option>
-<option value="2">Godkendt ans&#248;gning</option>
-<option value="3">Afvist ans&#248;gning</option>
+<option value="2">Godkendt ansøgning</option>
+<option value="3">Afvist ansøgning</option>
 <option selected="selected" value="10">Klar til bestilling</option>
-<option value="11">Pr&#248;ve bestilt</option>
-<option value="7">Gennemf&#248;rt</option>
+<option value="11">Prøve bestilt</option>
+<option value="7">Gennemført</option>
 <option value="9">Afbrudt</option>
 </select>
-                    <select Aria-Label="Vælg kørelæerer" autocomplete="on" class="form-control form-control-select " data-val="true" data-val-required="The DrivingInstructorId field is required." id="Filter.DrivingInstructorId" maxLength="none" name="Filter.DrivingInstructorId"><option value="">Alle k&#248;rel&#230;rere</option>
+                    <select aria-label="Vælg kørelæerer" autocomplete="on" class="form-control form-control-select " data-val="true" data-val-required="The DrivingInstructorId field is required." id="Filter.DrivingInstructorId" maxlength="none" name="Filter.DrivingInstructorId"><option value="">Alle kørelærere</option>
 <option selected="selected" value="2e48ed50-1189-40bc-b268-69d45d02bff4">Martin Boldt Persson</option>
 </select>
                 </div>
             </div>
             <div id="application-list" class="list-content col-xs-12">
-                <div class="ajaxgrid" data-custom-filters-container-id="application-list-filter" data-default-pagesize="50" data-default-sortdir="asc" data-url="Application/ApplicationList" id="applicationGrid"><div class="table-wrapper"><table><thead><tr><th title="Der kan ikke sorteres på denne kollonne">Forløbsnr.<div class="sort image" role="img" "aria-label="sorter"></div></th><th class="default-sort-key" data-sortkey="CitizenName" id="CitizenName_label" tabindex="0" title="Sorter">Navn<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">CPR-nummer<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">Oprettelsesdato<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="CategoryCode_label" title="Der kan ikke sorteres på denne kollonne">Kategori<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">Prøvetype<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="Team_label" title="Der kan ikke sorteres på denne kollonne">Hold<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">Status<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="NextExamCategoryType_label" title="Der kan ikke sorteres på denne kollonne">Næste prøve<div class="sort image" role="img" "aria-label="sorter"></div></th><th class="actions"></th></tr><tr class="column-filters"><th></th><th><input Aria-Labelledby="CitizenName_label" id="CitizenName" name="CitizenName" type="text" value="" /></th><th></th><th></th><th><input Aria-Labelledby="CategoryCode_label" id="CategoryCode" name="CategoryCode" type="text" value="" /></th><th></th><th><input Aria-Labelledby="Team_label" id="Team" name="Team" type="text" value="" /></th><th></th><th><input Aria-Labelledby="NextExamCategoryType_label" id="NextExamCategoryType" name="NextExamCategoryType" type="text" value="" /></th><th class="actions"></th></tr></thead><tbody></tbody></table></div><div class="footer"><div class="page-container"><div class="prev" title="Forrige side" tabindex="0"><i class="fa fa-chevron-left"></i></div><div class="page-text"></div><div class="next" title="Næste side" tabindex="0"><i class="fa fa-chevron-right"></i></div></div><div class="page-size-container"><div class="label">Vis</div><select id="pageSizeSelector"><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="0">Alle</option></select><div class="label">elementer</div></div><div class="reset">(<span class="link" tabindex="0">Nulstil</span>)</div><div class="status"></div><div class="clear"></div></div></div>
+                <div class="ajaxgrid" data-custom-filters-container-id="application-list-filter" data-default-pagesize="50" data-default-sortdir="asc" data-url="Application/ApplicationList" id="applicationGrid"><div class="table-wrapper"><table style="table-layout: fixed;"><thead><tr><th title="Der kan ikke sorteres på denne kollonne" class="first-child" style="width: auto;">Forløbsnr.<div class="sort image" role="img" "aria-label="sorter"></div></th><th class="default-sort-key" data-sortkey="CitizenName" id="CitizenName_label" tabindex="0" title="Sorter" style="width: auto;">Navn<div class="sort image asc" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne" style="width: auto;">CPR-nummer<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne" style="width: auto;">Oprettelsesdato<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="CategoryCode_label" title="Der kan ikke sorteres på denne kollonne" style="width: auto;">Kategori<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne" style="width: auto;">Prøvetype<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="Team_label" title="Der kan ikke sorteres på denne kollonne" style="width: auto;">Hold<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne" style="width: auto;">Status<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="NextExamCategoryType_label" title="Der kan ikke sorteres på denne kollonne" style="width: auto;">Næste prøve<div class="sort image" role="img" "aria-label="sorter"></div></th><th class="actions last-child" style="width: auto;"></th></tr><tr class="column-filters"><th class="first-child"></th><th><input aria-labelledby="CitizenName_label" id="CitizenName" name="CitizenName" type="text" value="" class="form-control form-control-small text-box single-line"></th><th></th><th></th><th><input aria-labelledby="CategoryCode_label" id="CategoryCode" name="CategoryCode" type="text" value="" class="form-control form-control-small text-box single-line"></th><th></th><th><input aria-labelledby="Team_label" id="Team" name="Team" type="text" value="" class="form-control form-control-small text-box single-line"></th><th></th><th><input aria-labelledby="NextExamCategoryType_label" id="NextExamCategoryType" name="NextExamCategoryType" type="text" value="" class="form-control form-control-small text-box single-line"></th><th class="actions last-child"></th></tr></thead><tbody>
+    <tr>
+        <td>
+            00769252
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=9dc78a13-f81e-43c0-9cd8-84e1e44b8ee2" role="button" aria-label="Gå til elevside for Alexander Bergsbo Nielsen" class="internal">Alexander Bergsbo Nielsen</a>
+        </td>
+        <td>
+            250504-5257
+        </td>
+        <td>
+            28-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            sep 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="cdb8c068-d414-4c8e-943a-c3f00b4685cb" data-toggle="tooltip" title="" data-original-title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="cdb8c068-d414-4c8e-943a-c3f00b4685cb" data-toggle="tooltip" title="" data-original-title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=cdb8c068-d414-4c8e-943a-c3f00b4685cb&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="" data-original-title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="cdb8c068-d414-4c8e-943a-c3f00b4685cb" data-toggle="tooltip" title="" data-original-title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="cdb8c068-d414-4c8e-943a-c3f00b4685cb" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="cdb8c068-d414-4c8e-943a-c3f00b4685cb" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00564569
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=efce0396-5d5f-492d-8baf-6e251dcea270" role="button" aria-label="Gå til elevside for Anton Patrick Rughholm Sörensen" class="internal">Anton Patrick Rughholm Sörensen</a>
+        </td>
+        <td>
+            040302-5151
+        </td>
+        <td>
+            04-03-2020
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            jan 20
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Teoriprøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="f66de9f4-f299-4a54-9e41-d2e52c7b9624" data-toggle="tooltip" title="" data-original-title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="f66de9f4-f299-4a54-9e41-d2e52c7b9624" data-toggle="tooltip" title="" data-original-title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=f66de9f4-f299-4a54-9e41-d2e52c7b9624&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="" data-original-title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="f66de9f4-f299-4a54-9e41-d2e52c7b9624" data-toggle="tooltip" title="" data-original-title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="f66de9f4-f299-4a54-9e41-d2e52c7b9624" data-toggle="tooltip" title="" data-original-title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="f66de9f4-f299-4a54-9e41-d2e52c7b9624" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00815752
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=7a684bcb-c3d9-42f4-8367-2f142a9995fd" role="button" aria-label="Gå til elevside for Benjamin Alexander Sørensen" class="internal">Benjamin Alexander Sørensen</a>
+        </td>
+        <td>
+            281004-5585
+        </td>
+        <td>
+            13-02-2022
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            jan 22
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Teoriprøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="83775dab-d458-4932-a868-e3889628694e" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="83775dab-d458-4932-a868-e3889628694e" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=83775dab-d458-4932-a868-e3889628694e&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="83775dab-d458-4932-a868-e3889628694e" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="83775dab-d458-4932-a868-e3889628694e" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="83775dab-d458-4932-a868-e3889628694e" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760899
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=28051e5f-e2ee-4179-9934-649281596d23" role="button" aria-label="Gå til elevside for Bine Christiane Grøn Lansner" class="internal">Bine Christiane Grøn Lansner</a>
+        </td>
+        <td>
+            181203-6196
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="46f039ef-d539-439a-8063-4d4b7fd0a18e" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="46f039ef-d539-439a-8063-4d4b7fd0a18e" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=46f039ef-d539-439a-8063-4d4b7fd0a18e&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="46f039ef-d539-439a-8063-4d4b7fd0a18e" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="46f039ef-d539-439a-8063-4d4b7fd0a18e" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="46f039ef-d539-439a-8063-4d4b7fd0a18e" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00607052
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=7dc905b9-9738-4343-9580-0e7c8f096d90" role="button" aria-label="Gå til elevside for Christiane Pouline Hedi Jensen" class="internal">Christiane Pouline Hedi Jensen</a>
+        </td>
+        <td>
+            020567-1196
+        </td>
+        <td>
+            13-07-2020
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="85e334f8-fd0b-4737-bc9e-f048591dc98d" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="85e334f8-fd0b-4737-bc9e-f048591dc98d" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=85e334f8-fd0b-4737-bc9e-f048591dc98d&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="85e334f8-fd0b-4737-bc9e-f048591dc98d" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="85e334f8-fd0b-4737-bc9e-f048591dc98d" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="85e334f8-fd0b-4737-bc9e-f048591dc98d" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00747226
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=fee21e5d-bfd5-40e3-9053-9630f9a1d8aa" role="button" aria-label="Gå til elevside for Clara Møller Jensen" class="internal">Clara Møller Jensen</a>
+        </td>
+        <td>
+            170103-6332
+        </td>
+        <td>
+            18-08-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="377d3509-58e8-45db-815c-bcacacd22282" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="377d3509-58e8-45db-815c-bcacacd22282" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=377d3509-58e8-45db-815c-bcacacd22282&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="377d3509-58e8-45db-815c-bcacacd22282" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="377d3509-58e8-45db-815c-bcacacd22282" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="377d3509-58e8-45db-815c-bcacacd22282" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00769248
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=b4d86a5f-fcf6-4706-9458-a61ee35f37e5" role="button" aria-label="Gå til elevside for Clara Sass Husum" class="internal">Clara Sass Husum</a>
+        </td>
+        <td>
+            271104-6448
+        </td>
+        <td>
+            28-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            sep 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="d17d5579-e835-493f-a539-c9c4067d89f4" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="d17d5579-e835-493f-a539-c9c4067d89f4" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=d17d5579-e835-493f-a539-c9c4067d89f4&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="d17d5579-e835-493f-a539-c9c4067d89f4" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="d17d5579-e835-493f-a539-c9c4067d89f4" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="d17d5579-e835-493f-a539-c9c4067d89f4" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00747231
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=cbb461a0-5389-483b-b890-a4bf753e1bf4" role="button" aria-label="Gå til elevside for Emil Grüttner Hovmand" class="internal">Emil Grüttner Hovmand</a>
+        </td>
+        <td>
+            220803-5625
+        </td>
+        <td>
+            18-08-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="f3630a65-af22-4a49-bff3-900a30223db2" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="f3630a65-af22-4a49-bff3-900a30223db2" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=f3630a65-af22-4a49-bff3-900a30223db2&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="f3630a65-af22-4a49-bff3-900a30223db2" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="f3630a65-af22-4a49-bff3-900a30223db2" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="f3630a65-af22-4a49-bff3-900a30223db2" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760911
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=30a5ce55-5852-464a-a980-1041b34c9a23" role="button" aria-label="Gå til elevside for Emilie Christine Paakjær" class="internal">Emilie Christine Paakjær</a>
+        </td>
+        <td>
+            090204-5228
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="e011d7d9-c5f2-46e3-984e-6b794b3d9c71" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="e011d7d9-c5f2-46e3-984e-6b794b3d9c71" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=e011d7d9-c5f2-46e3-984e-6b794b3d9c71&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="e011d7d9-c5f2-46e3-984e-6b794b3d9c71" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="e011d7d9-c5f2-46e3-984e-6b794b3d9c71" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="e011d7d9-c5f2-46e3-984e-6b794b3d9c71" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760913
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=71ffcd28-fe3e-4654-ba74-33f8db584d46" role="button" aria-label="Gå til elevside for Emilie Darmer" class="internal">Emilie Darmer</a>
+        </td>
+        <td>
+            060404-5118
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="69d6b9e0-1221-4f07-9782-847c365e8788" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="69d6b9e0-1221-4f07-9782-847c365e8788" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=69d6b9e0-1221-4f07-9782-847c365e8788&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="69d6b9e0-1221-4f07-9782-847c365e8788" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="69d6b9e0-1221-4f07-9782-847c365e8788" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="69d6b9e0-1221-4f07-9782-847c365e8788" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760901
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=8157cf41-ef05-4c9f-baa9-a4550c3a879a" role="button" aria-label="Gå til elevside for Gustav Wessel" class="internal">Gustav Wessel</a>
+        </td>
+        <td>
+            240803-6251
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="2c958bf5-05fd-4398-a0fd-3441bcd82f5b" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="2c958bf5-05fd-4398-a0fd-3441bcd82f5b" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=2c958bf5-05fd-4398-a0fd-3441bcd82f5b&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="2c958bf5-05fd-4398-a0fd-3441bcd82f5b" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="2c958bf5-05fd-4398-a0fd-3441bcd82f5b" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="2c958bf5-05fd-4398-a0fd-3441bcd82f5b" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00695595
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=4c889edc-88bc-46ff-916a-c9eecd91fa4c" role="button" aria-label="Gå til elevside for Iben Grau Nersting" class="internal">Iben Grau Nersting</a>
+        </td>
+        <td>
+            100702-6214
+        </td>
+        <td>
+            21-04-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            apr 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="75c58759-4d4a-45ba-8665-597da901b10c" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="75c58759-4d4a-45ba-8665-597da901b10c" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=75c58759-4d4a-45ba-8665-597da901b10c&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="75c58759-4d4a-45ba-8665-597da901b10c" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="75c58759-4d4a-45ba-8665-597da901b10c" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="75c58759-4d4a-45ba-8665-597da901b10c" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00735919
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=1a37dd28-8b39-4a06-b4d1-3ce116575aad" role="button" aria-label="Gå til elevside for Jette Junker Meinertz" class="internal">Jette Junker Meinertz</a>
+        </td>
+        <td>
+            181082-1902
+        </td>
+        <td>
+            19-07-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="e6f88d49-c25f-4c93-9c26-5a34a9fd8fa7" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="e6f88d49-c25f-4c93-9c26-5a34a9fd8fa7" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=e6f88d49-c25f-4c93-9c26-5a34a9fd8fa7&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="e6f88d49-c25f-4c93-9c26-5a34a9fd8fa7" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="e6f88d49-c25f-4c93-9c26-5a34a9fd8fa7" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="e6f88d49-c25f-4c93-9c26-5a34a9fd8fa7" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00769260
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=85da1ee3-bab4-4291-b1fd-f3560ee3cc1b" role="button" aria-label="Gå til elevside for Jonas Sait Bovien Sayir" class="internal">Jonas Sait Bovien Sayir</a>
+        </td>
+        <td>
+            240104-5611
+        </td>
+        <td>
+            28-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            sep 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="bb713326-6e83-4d67-8199-ff331b44f45b" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="bb713326-6e83-4d67-8199-ff331b44f45b" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=bb713326-6e83-4d67-8199-ff331b44f45b&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="bb713326-6e83-4d67-8199-ff331b44f45b" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="bb713326-6e83-4d67-8199-ff331b44f45b" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="bb713326-6e83-4d67-8199-ff331b44f45b" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760908
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=228c5f2a-f394-4da5-a911-288edfb01d2e" role="button" aria-label="Gå til elevside for Jonathan Antoine Villeret" class="internal">Jonathan Antoine Villeret</a>
+        </td>
+        <td>
+            280103-6751
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="d24f4647-4645-4539-826f-1acd174e4bd7" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="d24f4647-4645-4539-826f-1acd174e4bd7" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=d24f4647-4645-4539-826f-1acd174e4bd7&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="d24f4647-4645-4539-826f-1acd174e4bd7" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="d24f4647-4645-4539-826f-1acd174e4bd7" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="d24f4647-4645-4539-826f-1acd174e4bd7" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00695592
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=68dc3320-3768-45d0-ae07-25fe73c6a1fe" role="button" aria-label="Gå til elevside for Julie Quistgaard" class="internal">Julie Quistgaard</a>
+        </td>
+        <td>
+            190599-0892
+        </td>
+        <td>
+            21-04-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            apr 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="63f2a225-17d6-4b40-afe0-2f5a6fbbd75b" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="63f2a225-17d6-4b40-afe0-2f5a6fbbd75b" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=63f2a225-17d6-4b40-afe0-2f5a6fbbd75b&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="63f2a225-17d6-4b40-afe0-2f5a6fbbd75b" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="63f2a225-17d6-4b40-afe0-2f5a6fbbd75b" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="63f2a225-17d6-4b40-afe0-2f5a6fbbd75b" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00666093
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=a5be058f-4304-432a-9a94-8eb14d927151" role="button" aria-label="Gå til elevside for Kristian Harmen-Kofoed" class="internal">Kristian Harmen-Kofoed</a>
+        </td>
+        <td>
+            241200-5549
+        </td>
+        <td>
+            24-11-2020
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Okt 20
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="913bf755-16db-4b0e-a216-76f1fcb29b61" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="913bf755-16db-4b0e-a216-76f1fcb29b61" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=913bf755-16db-4b0e-a216-76f1fcb29b61&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="913bf755-16db-4b0e-a216-76f1fcb29b61" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="913bf755-16db-4b0e-a216-76f1fcb29b61" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="913bf755-16db-4b0e-a216-76f1fcb29b61" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00769250
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=7ebb51a2-f4c4-45b5-8edf-636903c3b6c3" role="button" aria-label="Gå til elevside for Kåre Smed" class="internal">Kåre Smed</a>
+        </td>
+        <td>
+            020604-5043
+        </td>
+        <td>
+            28-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            sep21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="65591447-882b-460d-accb-8e1bb473be43" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="65591447-882b-460d-accb-8e1bb473be43" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=65591447-882b-460d-accb-8e1bb473be43&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="65591447-882b-460d-accb-8e1bb473be43" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="65591447-882b-460d-accb-8e1bb473be43" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="65591447-882b-460d-accb-8e1bb473be43" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00747222
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=98bf9faa-e064-4d94-9394-89f1d0fc5f72" role="button" aria-label="Gå til elevside for Laura Wagner Rafn" class="internal">Laura Wagner Rafn</a>
+        </td>
+        <td>
+            110604-5018
+        </td>
+        <td>
+            18-08-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="66a36779-246a-49f9-9f08-f4bfd7077940" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="66a36779-246a-49f9-9f08-f4bfd7077940" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=66a36779-246a-49f9-9f08-f4bfd7077940&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="66a36779-246a-49f9-9f08-f4bfd7077940" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="66a36779-246a-49f9-9f08-f4bfd7077940" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="66a36779-246a-49f9-9f08-f4bfd7077940" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00747229
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=812d052a-7f01-4c94-a88b-7059f13f41fb" role="button" aria-label="Gå til elevside for Laurits Thomasen Rasmussen" class="internal">Laurits Thomasen Rasmussen</a>
+        </td>
+        <td>
+            300503-5359
+        </td>
+        <td>
+            18-08-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="8fc47bac-1578-49c5-9d5a-6f4c9f074a6e" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="8fc47bac-1578-49c5-9d5a-6f4c9f074a6e" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=8fc47bac-1578-49c5-9d5a-6f4c9f074a6e&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="8fc47bac-1578-49c5-9d5a-6f4c9f074a6e" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="8fc47bac-1578-49c5-9d5a-6f4c9f074a6e" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="8fc47bac-1578-49c5-9d5a-6f4c9f074a6e" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760914
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=4f773f08-46af-4ddb-9c08-b9d5f09a3596" role="button" aria-label="Gå til elevside for Liva Sofie Hanghøj Haugaard" class="internal">Liva Sofie Hanghøj Haugaard</a>
+        </td>
+        <td>
+            120904-5040
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="0549022a-4f81-4d23-8ebf-1c2e7ac803f4" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="0549022a-4f81-4d23-8ebf-1c2e7ac803f4" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=0549022a-4f81-4d23-8ebf-1c2e7ac803f4&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="0549022a-4f81-4d23-8ebf-1c2e7ac803f4" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="0549022a-4f81-4d23-8ebf-1c2e7ac803f4" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="0549022a-4f81-4d23-8ebf-1c2e7ac803f4" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00747234
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=bcebbeb4-0c05-40df-a4b7-08dbe3695219" role="button" aria-label="Gå til elevside for Lucas Elkjær Quistgaard" class="internal">Lucas Elkjær Quistgaard</a>
+        </td>
+        <td>
+            010602-5193
+        </td>
+        <td>
+            18-08-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="9bb473cc-1d1e-429f-a32d-d516f0b0b84b" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="9bb473cc-1d1e-429f-a32d-d516f0b0b84b" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=9bb473cc-1d1e-429f-a32d-d516f0b0b84b&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="9bb473cc-1d1e-429f-a32d-d516f0b0b84b" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="9bb473cc-1d1e-429f-a32d-d516f0b0b84b" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="9bb473cc-1d1e-429f-a32d-d516f0b0b84b" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00695600
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=869fdcf6-1496-4034-a4c2-09582dad0829" role="button" aria-label="Gå til elevside for Lukas Benjamin Gyldstrand" class="internal">Lukas Benjamin Gyldstrand</a>
+        </td>
+        <td>
+            100201-5583
+        </td>
+        <td>
+            21-04-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            apr 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="0f9aad60-0621-4f5a-bb8b-618e967a7107" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="0f9aad60-0621-4f5a-bb8b-618e967a7107" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=0f9aad60-0621-4f5a-bb8b-618e967a7107&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="0f9aad60-0621-4f5a-bb8b-618e967a7107" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="0f9aad60-0621-4f5a-bb8b-618e967a7107" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="0f9aad60-0621-4f5a-bb8b-618e967a7107" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00760905
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=472266b7-82a5-4a61-b05d-7b1acfbd6b64" role="button" aria-label="Gå til elevside for Magnus Pheiffer" class="internal">Magnus Pheiffer</a>
+        </td>
+        <td>
+            190104-6065
+        </td>
+        <td>
+            14-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Aug 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="f75f8ac3-ce27-4ad4-a553-02b29e8be751" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="f75f8ac3-ce27-4ad4-a553-02b29e8be751" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=f75f8ac3-ce27-4ad4-a553-02b29e8be751&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="f75f8ac3-ce27-4ad4-a553-02b29e8be751" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="f75f8ac3-ce27-4ad4-a553-02b29e8be751" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="f75f8ac3-ce27-4ad4-a553-02b29e8be751" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00814510
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=b1604ea0-f484-4fb6-9066-53da58aa57b3" role="button" aria-label="Gå til elevside for Michelle Lakjær Aagesen" class="internal">Michelle Lakjær Aagesen</a>
+        </td>
+        <td>
+            120804-6272
+        </td>
+        <td>
+            09-02-2022
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Teoriprøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="7bf603ef-b809-4215-9594-99665c41adab" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="7bf603ef-b809-4215-9594-99665c41adab" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=7bf603ef-b809-4215-9594-99665c41adab&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="7bf603ef-b809-4215-9594-99665c41adab" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="7bf603ef-b809-4215-9594-99665c41adab" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="7bf603ef-b809-4215-9594-99665c41adab" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00563973
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=551daa49-98cf-4f9a-8e50-8a0746f9e589" role="button" aria-label="Gå til elevside for Mikkel Vennekilde Lühdorf" class="internal">Mikkel Vennekilde Lühdorf</a>
+        </td>
+        <td>
+            200103-5307
+        </td>
+        <td>
+            03-03-2020
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Jan 20
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="db7a6c08-0bc5-449a-ae65-651f37f212f9" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="db7a6c08-0bc5-449a-ae65-651f37f212f9" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=db7a6c08-0bc5-449a-ae65-651f37f212f9&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="db7a6c08-0bc5-449a-ae65-651f37f212f9" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="db7a6c08-0bc5-449a-ae65-651f37f212f9" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="db7a6c08-0bc5-449a-ae65-651f37f212f9" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00695594
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=2bb83a32-3014-43cf-a409-fc42ad44fd0c" role="button" aria-label="Gå til elevside for Mikkel Wulff Breinstrup" class="internal">Mikkel Wulff Breinstrup</a>
+        </td>
+        <td>
+            050602-5761
+        </td>
+        <td>
+            21-04-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            apr 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="e5ef44a7-eddc-45f5-b364-215097fa7299" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="e5ef44a7-eddc-45f5-b364-215097fa7299" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=e5ef44a7-eddc-45f5-b364-215097fa7299&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="e5ef44a7-eddc-45f5-b364-215097fa7299" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="e5ef44a7-eddc-45f5-b364-215097fa7299" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="e5ef44a7-eddc-45f5-b364-215097fa7299" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00769257
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=f17ac4f0-7d16-41ac-b18f-6ad91273a647" role="button" aria-label="Gå til elevside for Nathalie Anita Quebec Kihlgast" class="internal">Nathalie Anita Quebec Kihlgast</a>
+        </td>
+        <td>
+            100604-5436
+        </td>
+        <td>
+            28-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            sep 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="1a8675ae-67b5-4aa0-b057-fb8bdf77af9f" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="1a8675ae-67b5-4aa0-b057-fb8bdf77af9f" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=1a8675ae-67b5-4aa0-b057-fb8bdf77af9f&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="1a8675ae-67b5-4aa0-b057-fb8bdf77af9f" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="1a8675ae-67b5-4aa0-b057-fb8bdf77af9f" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="1a8675ae-67b5-4aa0-b057-fb8bdf77af9f" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00695599
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=a60cf3e6-ffba-4510-b21c-9d6d212838c7" role="button" aria-label="Gå til elevside for Oliver Iversen Plum" class="internal">Oliver Iversen Plum</a>
+        </td>
+        <td>
+            120502-5827
+        </td>
+        <td>
+            21-04-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            apr 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="58a54991-700a-427a-8afc-e12536b59efc" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="58a54991-700a-427a-8afc-e12536b59efc" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=58a54991-700a-427a-8afc-e12536b59efc&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="58a54991-700a-427a-8afc-e12536b59efc" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="58a54991-700a-427a-8afc-e12536b59efc" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="58a54991-700a-427a-8afc-e12536b59efc" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00769261
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=57a093cf-904e-4e40-98fa-2293e11dd212" role="button" aria-label="Gå til elevside for Oliver Song Christensen" class="internal">Oliver Song Christensen</a>
+        </td>
+        <td>
+            260704-6479
+        </td>
+        <td>
+            28-09-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            sep 21
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="0880187e-fc3d-4ef2-ba71-927cb5e8c79c" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="0880187e-fc3d-4ef2-ba71-927cb5e8c79c" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=0880187e-fc3d-4ef2-ba71-927cb5e8c79c&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="0880187e-fc3d-4ef2-ba71-927cb5e8c79c" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="0880187e-fc3d-4ef2-ba71-927cb5e8c79c" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="0880187e-fc3d-4ef2-ba71-927cb5e8c79c" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00666105
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=cf6e4ce7-ddf6-4862-8a74-97587cf81f2a" role="button" aria-label="Gå til elevside for Pernille Heinsdorf Christiansen" class="internal">Pernille Heinsdorf Christiansen</a>
+        </td>
+        <td>
+            080402-5022
+        </td>
+        <td>
+            24-11-2020
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            Okt 20
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="a10543db-ac85-49d0-a3c3-c8b5b89235fe" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="a10543db-ac85-49d0-a3c3-c8b5b89235fe" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=a10543db-ac85-49d0-a3c3-c8b5b89235fe&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="a10543db-ac85-49d0-a3c3-c8b5b89235fe" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="a10543db-ac85-49d0-a3c3-c8b5b89235fe" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="a10543db-ac85-49d0-a3c3-c8b5b89235fe" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            00747240
+        </td>
+        <td>
+            <a href="/Internal/Citizen/Details?id=9b368cd5-bbda-4f66-8082-78c3df71a669" role="button" aria-label="Gå til elevside for Rasmus Barslund" class="internal">Rasmus Barslund</a>
+        </td>
+        <td>
+            220902-5763
+        </td>
+        <td>
+            18-08-2021
+        </td>
+        <td>
+            B
+        </td>
+        <td title="">
+            1. gangserhvervelse af førerretten
+        </td>
+        <td>
+            
+        </td>
+        <td>
+            Klar til bestilling
+        </td>
+        <td>
+            Praktisk prøve
+        </td>
+        <td class="iconlink">
+            
+    <a href="javascript:void(0)" class="dissociate-driving-instructor" aria-label="Frigiv" role="button" data-id="58d04f1d-4426-4a63-8836-89085bdf03e1" data-toggle="tooltip" title="Frigiv">
+        <i aria-hidden="true" class="fa fa-user-times"></i>
+    </a>
+    <a href="javascript:void(0)" class="edit-application" aria-label="Rediger ansøgning" role="button" data-id="58d04f1d-4426-4a63-8836-89085bdf03e1" data-toggle="tooltip" title="Rediger">
+        <i aria-hidden="true" class="fa fa-pencil-square-o"></i>
+    </a>
+    <a href="javascript:void(0)" class="create-exam" data-event-name="CREATE_OR_EDIT_EXAM" data-event-arguments="{&quot;Action&quot;:&quot;Internal/Exam/Create?applicationId=58d04f1d-4426-4a63-8836-89085bdf03e1&quot;}" aria-label="Bestil prøvetid" role="button" data-toggle="tooltip" title="Bestil prøvetid">
+        <i aria-hidden="true" class="fa fa-calendar"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-payment-history" aria-label="Vis betalingshistorik" role="button" data-id="58d04f1d-4426-4a63-8836-89085bdf03e1" data-toggle="tooltip" title="Vis betalingshistorik">
+        <i aria-hidden="true" class="fa fa-credit-card"></i>
+    </a>
+    <a href="javascript:void(0)" class="show-history" aria-label="Vis historik" role="button" data-id="58d04f1d-4426-4a63-8836-89085bdf03e1" data-toggle="tooltip" title="Historik">
+        <i aria-hidden="true" class="fa fa-history"></i>
+    </a>
+<a href="javascript:void(0)" class="print-p23" aria-label="Udskriv P23 blanket, ansøgning om kørekort" role="button" data-id="58d04f1d-4426-4a63-8836-89085bdf03e1" data-toggle="tooltip" title="Udskriv P23 blanket, ansøgning om kørekort">
+    <i aria-hidden="true" class="fa fa-print"></i>
+</a>
+        </td>
+    </tr>
+</tbody></table></div><div class="footer"><div class="page-container"><div class="prev disabled" title="Forrige side" tabindex="0"><i class="fa fa-chevron-left"></i></div><div class="page-text">Side 1 af 1</div><div class="next disabled" title="Næste side" tabindex="0"><i class="fa fa-chevron-right"></i></div></div><div class="page-size-container"><div class="label">Vis</div><select id="pageSizeSelector"><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="0">Alle</option></select><div class="label">elementer</div></div><div class="reset">(<span class="link" tabindex="0">Nulstil</span>)</div><div class="status">Viser 1 til 32 af 32 elementer</div><div class="clear"></div></div></div>
             </div>
         </div>
     </div>
@@ -166,7 +1767,7 @@
         </main>
         
 <footer class="container">
-    <p><h1 class="logoFooter">K&#248;repr&#248;vebooking ver. 3.3.3.20361 <span class="footer-small-text">(KCWEB01PROD)</span></h1></p>
+    <p></p><h1 class="logoFooter">Køreprøvebooking ver. 3.3.3.20361 <span class="footer-small-text">(KCWEB01PROD)</span></h1><p></p>
     <p>Ved problemer henvises til: <a href="https://driftsstatus.koreprovebooking.dk" target="_blank" role="link" aria-label="Link til vejledninger" class="external">Support</a></p>
     <p><a href="http://www.fstyr.dk/DA/" target="_blank" role="link" aria-label="Link til færdselsstyrelsen" class="external">fstyr.dk</a></p>
 </footer>
