@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="da" xml:lang="da">
+<head>
+    <!-- X-UA-Compatible placed as the first meta tag according to IE10 issue: https://github.com/FortAwesome/Font-Awesome/wiki/Troubleshooting -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+<title>K&#248;repr&#248;vebooking</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/Content/themes/base/all.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/Virk/designmanual.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/Virk/component.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap-select.min.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/bootstrap.min.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/font-awesome.min.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/chosen.min.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/toastr.min.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/jquery.timepicker.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/AjaxGrid/AjaxGrid.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="/Content/Base/Base.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css" />
+    <link href="/Areas/Internal/Content/Custom.css?3.3.3.20361" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Content/Images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Content/Images/favicon/favicon-16x16.png">
+    <script type='text/javascript'>
+        var appInsights=window.appInsights||function(config)
+        {
+            function r(config){ t[config] = function(){ var i = arguments; t.queue.push(function(){ t[config].apply(t, i)})} }
+            var t = { config:config},u=document,e=window,o='script',s=u.createElement(o),i,f;for(s.src=config.url||'//az416426.vo.msecnd.net/scripts/a/ai.0.js',u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=['Event','Exception','Metric','PageView','Trace','Ajax'];i.length;)r('track'+i.pop());return r('setAuthenticatedUserContext'),r('clearAuthenticatedUserContext'),config.disableExceptionTracking||(i='onerror',r('_'+i),f=e[i],e[i]=function(config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t['_' + i](config, r, u, e, o),s}),t
+        }({
+            instrumentationKey: 'b27168d7-93c3-404c-9859-6f4d0a9f096d'
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+<body id="body">
+    <div id="page">
+        
+<header class="container">
+    <div id="menu" class="navbar navbar-default">
+        <div class="container-fluid">
+            <div aria-hidden="true" id="logo">
+                <a href="/Internal/CitizenEvent" role="button" aria-label="Link til startside">
+                    <h1 class="logo">K&#248;repr&#248;vebooking</h1>
+                </a>
+            </div>
+            <section class="container">
+                    <div id="quick-search" class="col-sm-3 col-xs-12 pull-right">
+                        <div class="input-group col-sm-12 col-xs-6 pull-right">
+    <input Aria-Label="Søg på CPR-nummer eller forløbsnummer" class="form-control quick-search" data-url="/Internal/Application" id="page-header-quick-search" name="page-header-quick-search" placeholder="Indtast CPR-nr./forløbsnr." type="text" value="" />
+    <a href="javascript:void(0)" class="input-group-addon quick-search" aria-label="Søg på CPR-nummer eller forløbsnummer" role="button">
+        <i aria-hidden="true" class="fa fa-search"></i>
+    </a>
+</div>
+                    </div>
+                                    <div class="navbar-header row">
+                        <button class="btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Vis menu">
+                            <span aria-hidden="true" class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                    </div>
+                    <div id="header-menu-navbar" class="navbar-collapse collapse col-sm-9">
+                        <ul class="nav navbar-nav navbar-left">
+
+<li class="">
+    <a class="ui-test-Notifikationer" href="/Internal/CitizenEvent" role="button" aria-label="Vis Notifikationer">Notifikationer</a>
+</li>
+
+<li class="active">
+    <a class="ui-test-Pr&#248;veforl&#248;b" href="/Internal/Application" role="button" aria-label="Vis Pr&#248;veforl&#248;b">Pr&#248;veforl&#248;b</a>
+</li>
+
+<li class="">
+    <a class="ui-test-K&#248;reskole" href="/Internal/DrivingSchool/Details?id=9d268c98-a9f2-4cdc-ae3d-41b0c0c84323" role="button" aria-label="Vis K&#248;reskole">K&#248;reskole</a>
+</li>
+
+<li class="">
+    <a class="ui-test-Pr&#248;vetider" href="/Internal/Exam" role="button" aria-label="Vis Pr&#248;vetider">Pr&#248;vetider</a>
+</li>
+
+<li class="">
+    <a class="ui-test-Betalinger" href="/Internal/PaymentOverview" role="button" aria-label="Vis Betalinger">Betalinger</a>
+</li>
+
+<li class="">
+    <a class="ui-test-Elever" href="/Internal/Citizen" role="button" aria-label="Vis Elever">Elever</a>
+</li>
+                        </ul>
+                    </div>
+            </section>
+        </div>
+    </div>
+</header>
+
+        <main class="container">
+            <section id="main" class="main-content">
+                <div class="page-header">
+                    <div class="row">
+                        <div class="login col-sm-5 pull-right">
+                            
+<span>Velkommen:</span> Martin Boldt Persson
+<!-- logout icon -->
+    <span>
+        <a href="javascript:void(0)" class="logout" aria-label="Log ud" role="button" data-url="https://koreprovebooking.dk/Home/RedirectToLogout" data-toggle="tooltip" title="Log ud">
+            <i aria-hidden="true" class="fa fa-power-off logout"></i>
+        </a>
+    </span>
+                        </div>
+                        <div class="row description col-sm-7">
+                            
+    
+
+<h2>Pr&#248;veforl&#248;b</h2>
+<p class="text-info-darker">Du kan søge i listen for at finde et prøveforløb</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    
+
+
+
+<div id="application-index">
+    <div class="row">
+        <a href="javascript:void(0)" class="btn create-application button-row" data-url="/Internal/Application" role="button" aria-label="Opret nyt forløb">Opret forl&#248;b</a>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 framed-content">
+            <div id="application-list-title" class="col-xs-12">
+                <h3 class="tabheader">Oprettede pr&#248;veforl&#248;b</h3>
+            </div>
+            <div id="application-list-filter" class="filter-content col-xs-12">
+                <div class="pull-right">
+                    <label for="Filter_Status">Filtrering af liste:</label>
+                    <select Aria-Label="Vælg status" autocomplete="on" class="form-control form-control-select " data-val="true" data-val-required="The Filtrering af liste: field is required." id="Filter.Status" maxLength="none" name="Filter.Status"><option value="0">Alle statusser</option>
+<option value="12">Afventer elevunderskrift</option>
+<option value="1">Afventer behandling</option>
+<option value="4">Under viderebehandling</option>
+<option value="2">Godkendt ans&#248;gning</option>
+<option value="3">Afvist ans&#248;gning</option>
+<option selected="selected" value="10">Klar til bestilling</option>
+<option value="11">Pr&#248;ve bestilt</option>
+<option value="7">Gennemf&#248;rt</option>
+<option value="9">Afbrudt</option>
+</select>
+                    <select Aria-Label="Vælg kørelæerer" autocomplete="on" class="form-control form-control-select " data-val="true" data-val-required="The DrivingInstructorId field is required." id="Filter.DrivingInstructorId" maxLength="none" name="Filter.DrivingInstructorId"><option value="">Alle k&#248;rel&#230;rere</option>
+<option selected="selected" value="2e48ed50-1189-40bc-b268-69d45d02bff4">Martin Boldt Persson</option>
+</select>
+                </div>
+            </div>
+            <div id="application-list" class="list-content col-xs-12">
+                <div class="ajaxgrid" data-custom-filters-container-id="application-list-filter" data-default-pagesize="50" data-default-sortdir="asc" data-url="Application/ApplicationList" id="applicationGrid"><div class="table-wrapper"><table><thead><tr><th title="Der kan ikke sorteres på denne kollonne">Forløbsnr.<div class="sort image" role="img" "aria-label="sorter"></div></th><th class="default-sort-key" data-sortkey="CitizenName" id="CitizenName_label" tabindex="0" title="Sorter">Navn<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">CPR-nummer<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">Oprettelsesdato<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="CategoryCode_label" title="Der kan ikke sorteres på denne kollonne">Kategori<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">Prøvetype<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="Team_label" title="Der kan ikke sorteres på denne kollonne">Hold<div class="sort image" role="img" "aria-label="sorter"></div></th><th title="Der kan ikke sorteres på denne kollonne">Status<div class="sort image" role="img" "aria-label="sorter"></div></th><th id="NextExamCategoryType_label" title="Der kan ikke sorteres på denne kollonne">Næste prøve<div class="sort image" role="img" "aria-label="sorter"></div></th><th class="actions"></th></tr><tr class="column-filters"><th></th><th><input Aria-Labelledby="CitizenName_label" id="CitizenName" name="CitizenName" type="text" value="" /></th><th></th><th></th><th><input Aria-Labelledby="CategoryCode_label" id="CategoryCode" name="CategoryCode" type="text" value="" /></th><th></th><th><input Aria-Labelledby="Team_label" id="Team" name="Team" type="text" value="" /></th><th></th><th><input Aria-Labelledby="NextExamCategoryType_label" id="NextExamCategoryType" name="NextExamCategoryType" type="text" value="" /></th><th class="actions"></th></tr></thead><tbody></tbody></table></div><div class="footer"><div class="page-container"><div class="prev" title="Forrige side" tabindex="0"><i class="fa fa-chevron-left"></i></div><div class="page-text"></div><div class="next" title="Næste side" tabindex="0"><i class="fa fa-chevron-right"></i></div></div><div class="page-size-container"><div class="label">Vis</div><select id="pageSizeSelector"><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option><option value="0">Alle</option></select><div class="label">elementer</div></div><div class="reset">(<span class="link" tabindex="0">Nulstil</span>)</div><div class="status"></div><div class="clear"></div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                </div>
+            </section>
+        </main>
+        
+<footer class="container">
+    <p><h1 class="logoFooter">K&#248;repr&#248;vebooking ver. 3.3.3.20361 <span class="footer-small-text">(KCWEB01PROD)</span></h1></p>
+    <p>Ved problemer henvises til: <a href="https://driftsstatus.koreprovebooking.dk" target="_blank" role="link" aria-label="Link til vejledninger" class="external">Support</a></p>
+    <p><a href="http://www.fstyr.dk/DA/" target="_blank" role="link" aria-label="Link til færdselsstyrelsen" class="external">fstyr.dk</a></p>
+</footer>
+    </div>
+    
+<script src="/bundles/shared/scripts?v=9QgjmPaIdyPNBE-0Z_1gK8VWPV58pO8sghakAWgKbj81"></script>
+
+<script type="text/javascript" src="/Internal/Home/GenerateSharedScript?3.3.3.20361"></script>
+<script type="text/javascript">
+        $(function () {
+            var global = new KPB.Global({ Notification: '' });
+            global.Init($('#body'));
+        });
+</script>
+    <script src="/Areas/Internal/Scripts/KPB.Internal.js?3.3.3.20361" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var internal = new KPB.Internal();
+            internal.Init($('#body'));
+        });
+    </script>
+    
+    <script src="/Areas/Internal/Scripts/KPB.Application.js?3.3.3.20361" type="text/javascript"></script>
+    <script src="/Areas/Internal/Scripts/ExamCreate.js?3.3.3.20361" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(function () {
+                
+    var application = new KPB.Application();
+    application.InitList($('#application-index'));
+
+    KPB.ExamCreate.Init($('#application-index'));
+
+            });
+        </script>
+</body>
+</html>
